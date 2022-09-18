@@ -8,15 +8,18 @@ public class ClickMove : MonoBehaviour
     public float rotation;
     private Vector3 TPosition;
     private bool isMoving = false;
+    public GameObject rocet;
     void FixedUpdate()
     {   
-        if (Input.GetMouseButton(0))//запуск програмы если нажата левая кноака мишы
+        if (Input.GetMouseButton(0))//запуск програмы если нажата левая кноака мышы
         {
             TPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);//определение кардинат курсора
             TPosition.z = transform.position.z;//замена каодинаты Z курсора на кардинату Z обекта, нам не надо менять глубину потомучто 2D
-            isMoving = false ;//запрешаем запуск движения по кардинатом курсора
+            //Instantiate(rocet,TPosition,Quaternion.identity);
+            //Destroy(rocet);
             float rotz= Mathf.Atan2(TPosition.y,TPosition.x)*Mathf.Rad2Deg; //математические фокусы для вычесления необходимых градусов
-            transform.rotation = Quaternion.Euler(0f,0f,rotz+rotation);//поворот обекта на градусы из переменой rotz с прибавлением нежной скорости 
+            transform.rotation = Quaternion.Euler(0f,0f,rotz+rotation);//поворот обекта на градусы из переменой rotz с прибавлением нужной скорости 
+            isMoving = false ;//запрешаем запуск движения по кардинатом курсора
         }
         if (false==Input.GetMouseButton(0))//запуск програмы после отжатия левой кнопки мыши
         {

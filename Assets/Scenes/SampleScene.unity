@@ -542,6 +542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotation: -100
+  rocet: {fileID: 1612141671}
 --- !u!1 &1979654725
 GameObject:
   m_ObjectHideFlags: 0
