@@ -6,30 +6,52 @@ public class ClickMove : MonoBehaviour
 {
     public float speed;
     public float rotation;
-    private Vector3 TPosition;
-    private bool isMoving = false;
-    public GameObject rocet;
-    void FixedUpdate()
+    Rigidbody2D Rb;
+
+    void Start()
+    {
+        Rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
     {   
-        if (Input.GetMouseButton(0))//запуск програмы если нажата левая кноака мышы
+        //Vector3 dvig = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"),0);
+        //transform.Translate(dvig * speed * Time.deltaTime);
+        //Rb.MovePosition(transform.position + dvig * Time.deltaTime * speed);   
+        if (Input.GetKey(KeyCode.W))
         {
-            TPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);//определение кардинат курсора
-            TPosition.z = transform.position.z;//замена каодинаты Z курсора на кардинату Z обекта, нам не надо менять глубину потомучто 2D
-            //Instantiate(rocet,TPosition,Quaternion.identity);
-            //Destroy(rocet);
-            float rotz= Mathf.Atan2(TPosition.y,TPosition.x)*Mathf.Rad2Deg; //математические фокусы для вычесления необходимых градусов
-            transform.rotation = Quaternion.Euler(0f,0f,rotz+rotation);//поворот обекта на градусы из переменой rotz с прибавлением нужной скорости 
-            isMoving = false ;//запрешаем запуск движения по кардинатом курсора
+            Rb.AddRelativeForce(Vector2.up * speed);
         }
-        if (false==Input.GetMouseButton(0))//запуск програмы после отжатия левой кнопки мыши
+
+        if (Input.GetKey(KeyCode.S))
         {
-            isMoving = true;//разрешаем запуск движения по кардинатом курсора
+            Rb.AddRelativeForce(Vector2.down * speed);
         }
-        if (isMoving)
+
+        if (Input.GetKey(KeyCode.A))
         {
-            transform.position = Vector3.MoveTowards(transform.position, TPosition, speed * Time.fixedDeltaTime);//двежения на сохранёные каординаты мышки
-            if (transform.position == TPosition)//запуск програмы если сохранёные каординаты мышки совподают с кардинатоми обекта 
-                isMoving = false;//запрешаем запуск движения по кардинатом курсора
+            Rb.AddRelativeForce(Vector2.left * speed);
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            Rb.AddRelativeForce(Vector2.right * speed);
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            //transform.Rotate(0, 0, rotation);
+            //Vector3 rot = new Vector3(0,0,1);
+            //Quaternion rot1 = Quaternion.Euler(rot * (Time.fixedDeltaTime + speed));
+            Rb.MoveRotation(Rb.rotation + speed);
+        }
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            //transform.Rotate(0, 0, rotation - rotation*2);
+            //Vector3 rot = new Vector3(0, 0, -1);
+            //Quaternion rot1 = Quaternion.Euler(rot * (Time.fixedDeltaTime + speed));
+            Rb.MoveRotation(Rb.rotation - speed);
         }
     }
 }
