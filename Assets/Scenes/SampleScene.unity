@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 2172458}
   - component: {fileID: 2172460}
   - component: {fileID: 2172461}
+  - component: {fileID: 2172462}
   m_Layer: 0
   m_Name: puwca
   m_TagString: Untagged
@@ -148,7 +149,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2172457}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: -0.13, z: 0}
   m_LocalScale: {x: 0.096429996, y: 0.096429996, z: 0.096429996}
   m_ConstrainProportionsScale: 0
@@ -222,11 +223,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: -90
+  rotation: 1
   laser: {fileID: 2579691031296142408, guid: bd0132204e00701459cb452f8a58f650, type: 3}
   pawpoint: {fileID: 1199551773}
   player: {fileID: 1612141675}
   starttimepaw: 1
-  zader: 100
+--- !u!50 &2172462
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2172457}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 1
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &85790321
 GameObject:
   m_ObjectHideFlags: 0

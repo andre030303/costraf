@@ -5,31 +5,32 @@ using UnityEngine;
 public class pawpaw2 : MonoBehaviour
 {
     public float offset;
+    public float rotation;
     Rigidbody2D Rb;
     public GameObject laser;
     public Transform pawpoint;
     public Transform player;
     private float timepaw;
     public float starttimepaw;
-    public float zader;
-    private float timezader;
 
     void Start()
     {
         Rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {    
-        Vector3 Enemy =player.position - transform.position;
-        float rotz = Mathf.Atan2(Enemy.y,Enemy.x)*Mathf.Rad2Deg;
-        if(timezader>=zader)
+        Vector3 Enemy = player.position - transform.position;
+        float rotz = (Mathf.Atan2(Enemy.y,Enemy.x)*Mathf.Rad2Deg)+offset;
+        print(rotz);
+        if (Rb.rotation>rotz)
         {
-            transform.rotation=Quaternion.Euler(0,0,rotz+offset); 
-            timezader=0;
+            Rb.AddTorque(-rotation);
         }
-        timezader+=1;
-
+        if (Rb.rotation<rotz)
+        {   
+            Rb.AddTorque(rotation);
+        }            
         if(timepaw<=0)
         {
                 Instantiate(laser,pawpoint.position,transform.rotation);
