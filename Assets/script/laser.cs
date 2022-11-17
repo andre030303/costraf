@@ -8,7 +8,8 @@ public class laser : MonoBehaviour
     public float lifetime;
     public float distanse;
     public int damage;
-    private float zader=0;
+    public float zader;
+    private float schet=0;
     public LayerMask whatIsSolid;
     private float t=0;
     
@@ -16,7 +17,7 @@ public class laser : MonoBehaviour
     private void Update()
     {       
         transform.Translate(Vector2.up*speed*Time.deltaTime);
-        if(zader>=2)
+        if(schet>=zader)
         {
             RaycastHit2D hitInfo = Physics2D.Raycast(transform.position,transform.up,distanse,whatIsSolid);
             if(hitInfo.collider != null)
@@ -39,7 +40,7 @@ public class laser : MonoBehaviour
                 Destroy(gameObject);
             }  
         }
-        zader+=1;
+        schet+=1;
 
     }
 }

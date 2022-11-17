@@ -5,12 +5,26 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     Rigidbody2D Rb;
+
     public int health;
+
     public Transform player;
+
     public float offset;
+
     public float rotation;
+
     public float speed;
+
     public float stopos;
+
+    private void Awake()
+    {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+    }
 
     void Start()
     {
@@ -19,9 +33,9 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if(health <=0)
+        if (health <= 0)
         {
-            Destroy(gameObject);
+            Destroy (gameObject);
         }
 
         Vector3 Enemy = player.position - transform.position;
@@ -32,9 +46,9 @@ public class Enemy : MonoBehaviour
         }
         if (Rb.rotation < rotz)
         {
-            Rb.AddTorque(rotation);
+            Rb.AddTorque (rotation);
         }
-        if (Vector2.Distance(player.position, transform.position)>stopos)
+        if (Vector2.Distance(player.position, transform.position) > stopos)
         {
             Rb.AddRelativeForce(Vector2.up * speed);
         }
@@ -42,6 +56,6 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health-=damage;
+        health -= damage;
     }
 }

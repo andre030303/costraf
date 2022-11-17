@@ -5,15 +5,32 @@ using UnityEngine;
 public class pawpaw2 : MonoBehaviour
 {
     public float offset;
+
     public float rotation;
+
     Rigidbody2D Rb;
+
     public GameObject laser;
+
     public Transform pawpoint;
+
     public Transform player;
+
     public Transform bas;
+
     private float timepaw;
+
     public float starttimepaw;
+
     public float ros;
+
+    private void Awake()
+    {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+    }
 
     void Start()
     {
@@ -21,26 +38,29 @@ public class pawpaw2 : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
+    {  
         transform.position = bas.position;
         Vector3 Enemy = player.position - transform.position;
-        float rotz = (Mathf.Atan2(Enemy.y,Enemy.x)*Mathf.Rad2Deg)+offset;
-        if (Rb.rotation>rotz)
+        float rotz = (Mathf.Atan2(Enemy.y, Enemy.x) * Mathf.Rad2Deg) + offset;
+        if (Rb.rotation > rotz)
         {
             Rb.AddTorque(-rotation);
         }
-        if (Rb.rotation<rotz)
-        {   
-            Rb.AddTorque(rotation);
-        }
-        if(timepaw<=0 & ros > Vector2.Distance(player.position, transform.position))
+        if (Rb.rotation < rotz)
         {
-            Instantiate(laser,pawpoint.position,transform.rotation);
-            timepaw=starttimepaw;
+            Rb.AddTorque (rotation);
+        }
+        if (
+            timepaw <= 0 &
+            ros > Vector2.Distance(player.position, transform.position)
+        )
+        {
+            Instantiate(laser, pawpoint.position, transform.rotation);
+            timepaw = starttimepaw;
         }
         else
         {
-            timepaw-=Time.deltaTime;
+            timepaw -= Time.deltaTime;
         }
     }
 }
