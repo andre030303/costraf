@@ -14,7 +14,7 @@ public class map : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.F))
+        if (!(GameObject.FindGameObjectWithTag("Enemy")) && Input.GetKey(KeyCode.F))
         {
             mape.SetActive(true);
         }

@@ -12,13 +12,19 @@ public class strelrf : MonoBehaviour
 
     void Update()
     {
-        if (enemy == null)
+        if (GameObject.FindGameObjectWithTag("Enemy") != null)
         {
             enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
         }
-
-        Vector3 Enemy = enemy.position - transform.position;
-        float rotz = (Mathf.Atan2(Enemy.y, Enemy.x) * Mathf.Rad2Deg);
-        transform.rotation = Quaternion.Euler(0, 0, rotz + offset);
+        if (enemy != null)
+        {
+            Vector3 Enemy = enemy.position - transform.position;
+            float rotz = (Mathf.Atan2(Enemy.y, Enemy.x) * Mathf.Rad2Deg);
+            transform.rotation = Quaternion.Euler(0, 0, rotz + offset); 
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -26,10 +26,7 @@ public class pawpaw2 : MonoBehaviour
 
     private void Awake()
     {
-        if (player == null)
-        {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
-        }
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Start()

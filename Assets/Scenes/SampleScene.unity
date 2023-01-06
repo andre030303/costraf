@@ -1256,7 +1256,7 @@ GameObject:
   - component: {fileID: 1384813530}
   - component: {fileID: 1384813531}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Strelka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1394,8 +1394,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499044173}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1, y: 220, z: 108}
-  m_LocalScale: {x: 43.10252, y: 43.10252, z: 43.102516}
+  m_LocalPosition: {x: 3, y: 150, z: 108}
+  m_LocalScale: {x: 14.529428, y: 14.529428, z: 14.529427}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1384813530}
