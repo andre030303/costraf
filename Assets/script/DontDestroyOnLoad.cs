@@ -8,4 +8,12 @@ public class DontDestroyOnLoad : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
     }
+
+    public void Update()
+    {
+        if (GameObject.Find("rocet") == null)
+        {
+            Destroy (gameObject);
+        }
+    }
 }

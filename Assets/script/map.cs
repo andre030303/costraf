@@ -7,9 +7,12 @@ public class map : MonoBehaviour
 {
     public GameObject mape;
 
+    public GameObject strelka;
+
     public void star1()
     {   
         SceneManager.LoadScene(2);
+        strelka.SetActive(true);
     }      
 
     void Update()

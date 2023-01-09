@@ -218,7 +218,6 @@ RectTransform:
   m_Children:
   - {fileID: 1136207091}
   - {fileID: 1775961770}
-  - {fileID: 1384813530}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -686,6 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mape: {fileID: 1775961769}
+  strelka: {fileID: 1384813529}
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,13 +1269,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384813529}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalScale: {x: 0.009259259, y: 0.009259259, z: 0.018518519}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1499044174}
-  m_Father: {fileID: 109746993}
+  m_Father: {fileID: 1612141675}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1384813531
@@ -1293,6 +1293,7 @@ MonoBehaviour:
   offset: -90
   enemy: {fileID: 0}
   rotation: 0.5
+  strelka: {fileID: 1384813529}
 --- !u!1 &1388700846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1489,7 @@ Transform:
   m_Children:
   - {fileID: 1998351857}
   - {fileID: 297894499}
+  - {fileID: 1384813530}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

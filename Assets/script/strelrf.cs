@@ -10,6 +10,8 @@ public class strelrf : MonoBehaviour
 
     public float rotation;
 
+    public GameObject strelka;
+
     void Update()
     {
         if (GameObject.FindGameObjectWithTag("Enemy") != null)
@@ -24,7 +26,7 @@ public class strelrf : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            strelka.SetActive(false);
         }
     }
 }

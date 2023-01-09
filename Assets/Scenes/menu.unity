@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 18763465}
   m_Layer: 0
   m_Name: "\u0446\u0435\u043B\u044C"
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18763464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5800078, y: -0.17395486, z: -0.46559066}
+  m_LocalPosition: {x: 1.5800078, y: -0.17395486, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -410,8 +410,8 @@ GameObject:
   - component: {fileID: 494328378}
   - component: {fileID: 494328377}
   m_Layer: 6
-  m_Name: rocet (1)
-  m_TagString: Enemy
+  m_Name: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -541,8 +541,8 @@ GameObject:
   - component: {fileID: 503729633}
   - component: {fileID: 503729632}
   m_Layer: 6
-  m_Name: rocet (2)
-  m_TagString: Enemy
+  m_Name: Enemy (2)
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1963,8 +1963,8 @@ GameObject:
   - component: {fileID: 1823522239}
   - component: {fileID: 1823522238}
   m_Layer: 6
-  m_Name: rocet (3)
-  m_TagString: Enemy
+  m_Name: Enemy (3)
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
