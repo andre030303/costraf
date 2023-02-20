@@ -5,16 +5,10 @@ using UnityEngine;
 public class pawpaw : MonoBehaviour
 {
     public float offset;
-    Rigidbody2D Rb;
     public GameObject laser;
     public Transform pawpoint;
     private float timepaw;
     public float starttimepaw;
-
-    void Start()
-    {
-        Rb = GetComponent<Rigidbody2D>();
-    }
 
     void Update()
     {

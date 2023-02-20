@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2579691031296142409}
   - component: {fileID: 2949909819617693395}
   m_Layer: 6
-  m_Name: 266104031026212 2
+  m_Name: laser menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2579691031296142408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.616, y: -2.404, z: 0}
-  m_LocalScale: {x: 0.41, y: 0.41, z: 0.41}
+  m_LocalScale: {x: 0.06, y: 0.06, z: 0.06}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,11 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462ae4f0f1474104b89df8abd6686420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  lifetime: 240
+  speed: 30
+  lifetime: 60
   distanse: 0.1
-  damage: 5
-  zader: 100
+  damage: 0
+  zader: 2
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 64

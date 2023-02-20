@@ -36,7 +36,7 @@ public class pawpaw2 : MonoBehaviour
 
     void FixedUpdate()
     {  
-        transform.position = bas.position;
+        transform.position = new Vector3(bas.position.x,bas.position.y,0);
         Vector3 Enemy = player.position - transform.position;
         float rotz = (Mathf.Atan2(Enemy.y, Enemy.x) * Mathf.Rad2Deg) + offset;
         if (Rb.rotation > rotz)
@@ -47,10 +47,7 @@ public class pawpaw2 : MonoBehaviour
         {
             Rb.AddTorque (rotation);
         }
-        if (
-            timepaw <= 0 &
-            ros > Vector2.Distance(player.position, transform.position)
-        )
+        if ( timepaw <= 0 & ros > Vector2.Distance(player.position, transform.position))
         {
             Instantiate(laser, pawpoint.position, transform.rotation);
             timepaw = starttimepaw;
