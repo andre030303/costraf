@@ -2155,7 +2155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73646d4a999428e4c9b1cb8bc696bcef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -90
+  offset: -80
   rotation: 10
   laser: {fileID: 2579691031296142408, guid: dae2e24552b8f3542ba0d9d9c8c02bca, type: 3}
   pawpoint: {fileID: 442852022}
