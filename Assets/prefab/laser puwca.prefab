@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  lifetime: 60
+  zader: 0.01
+  lifetime: 1
   distanse: 0.1
   damage: 1
-  zader: 2
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 64

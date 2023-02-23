@@ -5,13 +5,12 @@ using UnityEngine;
 public class laser : MonoBehaviour
 {
     public float speed;
+    public float zader;
+    private float schet;    
     public float lifetime;
     public float distanse;
     public int damage;
-    public float zader;
-    private float schet=0;
     public LayerMask whatIsSolid;
-    private float t=0;
     
 
     private void Update()
@@ -33,14 +32,13 @@ public class laser : MonoBehaviour
                 }
                 Destroy(gameObject);
             }
-            t += 1;
 
-            if(lifetime==t)
+            if(lifetime<=schet)
             {
                 Destroy(gameObject);
             }  
         }
-        schet+=1;
+        schet+=Time.deltaTime;
 
     }
 }
