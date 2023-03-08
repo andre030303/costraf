@@ -11,20 +11,27 @@ public class map : MonoBehaviour
 
     public GameObject Text;
 
+    public GameObject hpbos;
+
+
     public void star1()
     {
         SceneManager.LoadScene(2);
         strelka.SetActive(true);
+        hpbos.SetActive(true);
     }
 
     public void star2()
     {
         SceneManager.LoadScene(3);
         strelka.SetActive(true);
+        hpbos.SetActive(true);
     }
+
 
     void Update()
     {
+
         if (!(GameObject.FindGameObjectWithTag("Enemy")))
         {
             Text.SetActive(true);

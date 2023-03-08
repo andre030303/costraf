@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 82677725}
   - component: {fileID: 82677724}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -544,12 +544,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b196ec43d2702d54ca1eadb987a25468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  healt: 10
   player: {fileID: 0}
   offset: -70
   rotation: 5
   speed: 1
   stopos: 5
+  Boss: 0
+  helbar: {fileID: 0}
 --- !u!4 &82677727
 Transform:
   m_ObjectHideFlags: 0
@@ -1616,7 +1618,7 @@ GameObject:
   - component: {fileID: 1853021029}
   - component: {fileID: 1853021028}
   m_Layer: 6
-  m_Name: Enemy (1)
+  m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2024,12 +2026,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b196ec43d2702d54ca1eadb987a25468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  healt: 10
   player: {fileID: 0}
   offset: -70
   rotation: 5
   speed: 1
   stopos: 5
+  Boss: 0
+  helbar: {fileID: 0}
 --- !u!4 &1853021031
 Transform:
   m_ObjectHideFlags: 0
