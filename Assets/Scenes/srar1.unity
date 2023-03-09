@@ -1000,12 +1000,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healt: 10
   player: {fileID: 0}
-  offset: -70
+  offset: -50
   rotation: 5
   speed: 1
-  stopos: 5
   Boss: 1
-  helbar: {fileID: 0}
 --- !u!4 &1686969858
 Transform:
   m_ObjectHideFlags: 0
@@ -1404,6 +1402,7 @@ GameObject:
   - component: {fileID: 1738161673}
   - component: {fileID: 1738161672}
   - component: {fileID: 1738161671}
+  - component: {fileID: 1738161675}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -1502,12 +1501,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healt: 3
   player: {fileID: 0}
-  offset: -70
-  rotation: 0.5
+  offset: -50
+  rotation: 0.1
   speed: 1
-  stopos: 2
   Boss: 0
-  helbar: {fileID: 0}
 --- !u!4 &1738161674
 Transform:
   m_ObjectHideFlags: 0
@@ -1525,6 +1522,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1738161675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738161670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b196ec43d2702d54ca1eadb987a25468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healt: 3
+  player: {fileID: 0}
+  offset: -180
+  rotation: 0.1
+  speed: 1
+  Boss: 0
 --- !u!1 &1745449139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,12 +2344,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healt: 3
   player: {fileID: 0}
-  offset: -70
-  rotation: 0.5
+  offset: -50
+  rotation: 0.1
   speed: 1
-  stopos: 2
   Boss: 0
-  helbar: {fileID: 0}
 --- !u!4 &1994284102
 Transform:
   m_ObjectHideFlags: 0

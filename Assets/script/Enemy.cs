@@ -16,8 +16,6 @@ public class Enemy : MonoBehaviour
 
     public float speed;
 
-    public float stopos;
-
     public bool Boss;
 
     private HEALTH HEALTH;
@@ -64,16 +62,13 @@ public class Enemy : MonoBehaviour
         float rotz = (Mathf.Atan2(Enemy.y, Enemy.x) * Mathf.Rad2Deg) + offset;
         if (Rb.rotation > rotz)
         {
-            Rb.AddTorque(-rotation);
+            Rb.AddTorque (-rotation);
         }
-        if (Rb.rotation < rotz)
+        if (Rb.rotation < rotz ) 
         {
-            Rb.AddTorque (rotation);
+            Rb.AddTorque(rotation);
         }
-        if (Vector2.Distance(player.position, transform.position) > stopos)
-        {
-            Rb.AddRelativeForce(Vector2.up * speed);
-        }
+        Rb.AddRelativeForce(Vector2.up * speed);
     }
 
     public void TakeDamage(int damage)
