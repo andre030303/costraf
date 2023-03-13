@@ -550,6 +550,7 @@ MonoBehaviour:
   rotation: 5
   speed: 1
   Boss: 1
+  Boss2: 0
 --- !u!4 &82677727
 Transform:
   m_ObjectHideFlags: 0
@@ -2029,7 +2030,8 @@ MonoBehaviour:
   offset: -50
   rotation: 5
   speed: 1
-  Boss: 1
+  Boss: 0
+  Boss2: 1
 --- !u!4 &1853021031
 Transform:
   m_ObjectHideFlags: 0

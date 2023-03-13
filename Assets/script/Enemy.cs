@@ -18,23 +18,42 @@ public class Enemy : MonoBehaviour
 
     public bool Boss;
 
+    public bool Boss2;
+
     private HEALTH HEALTH;
 
-    private GameObject helbar;
+    public GameObject helbar;
+
+    public GameObject helbar2;
 
     private void Awake()
     {
-        if (GameObject.FindGameObjectWithTag("Player") != null)
-        {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
-        }
-
-        if (GameObject.FindGameObjectWithTag("hp") != null)
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (Boss)
         {
             helbar = GameObject.FindGameObjectWithTag("hp");
             helbar.SetActive(false);
+            if(GameObject.Find("Boss") ==  null)
+            {
+                helbar2 = GameObject.FindGameObjectWithTag("hp2");
+                helbar2.SetActive(false);
+            }
+        }else if (!Boss2)
+        {
+
+            helbar = GameObject.FindGameObjectWithTag("hp");
+            helbar.SetActive(false);
+            helbar2 = GameObject.FindGameObjectWithTag("hp2");
+            helbar2.SetActive(false);  
+        }
+        if (Boss2)
+        {
+            helbar2 = GameObject.FindGameObjectWithTag("hp2");
+            helbar2.SetActive(false);
         }
     }
+
+
 
     void Start()
     {
@@ -45,6 +64,12 @@ public class Enemy : MonoBehaviour
             HEALTH = helbar.GetComponent<HEALTH>();
             HEALTH.SetMaxHelth (healt);
         }
+        if(Boss2 == true)
+        {   
+            helbar2.SetActive(true);
+            HEALTH = helbar2.GetComponent<HEALTH>();
+            HEALTH.SetMaxHelth (healt);
+        }
     }
 
     private void Update()
@@ -53,7 +78,11 @@ public class Enemy : MonoBehaviour
         {
             if(Boss == true)
             {
-                helbar.SetActive(false);               
+                helbar.SetActive(false);             
+            }
+            if(Boss2 == true)
+            {
+                helbar2.SetActive(false);             
             }
             Destroy (gameObject);
         }
@@ -74,7 +103,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         healt -= damage;
-        if(Boss == true)
+        if(Boss == true || Boss2 == true)
         {
             HEALTH.SetHealth (healt);
         }

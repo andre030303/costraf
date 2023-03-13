@@ -13,6 +13,16 @@ public class wasd : MonoBehaviour
         Rb = GetComponent<Rigidbody2D>();
     }
 
+    public void harm(float procenti)
+    {
+        if(procenti< 50)
+        {
+            speed=(speed/50)*procenti;
+            rotation=(rotation/50)*procenti;
+        }
+
+    }
+
     void FixedUpdate()
     {   
         if (Input.GetKey(KeyCode.W))

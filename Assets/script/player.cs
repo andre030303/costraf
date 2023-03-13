@@ -11,6 +11,10 @@ public class player : MonoBehaviour
 
     private int MaxHelth2;
 
+    private float procent;
+
+    private float procenti;
+
     public HEALTH helbar;
 
     private void Update()
@@ -31,5 +35,8 @@ public class player : MonoBehaviour
     {
         health -= damage;
         helbar.SetHealth (health);
+        procent = (float)MaxHelth/100;
+        procenti = (float)health/procent;
+        GetComponent<wasd>().harm(procenti);
     }
 }
