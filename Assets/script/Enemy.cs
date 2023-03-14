@@ -22,9 +22,9 @@ public class Enemy : MonoBehaviour
 
     private HEALTH HEALTH;
 
-    public GameObject helbar;
+    private GameObject helbar;
 
-    public GameObject helbar2;
+    private GameObject helbar2;
 
     private void Awake()
     {

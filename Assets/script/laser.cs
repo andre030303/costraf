@@ -9,9 +9,13 @@ public class laser : MonoBehaviour
     private float schet;    
     public float lifetime;
     public float distanse;
-    public int damage;
+    private int damage;
     public LayerMask whatIsSolid;
     
+    public void Upgredate(int damage2)
+    {
+        damage=damage2;
+    }
 
     private void Update()
     {       

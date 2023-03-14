@@ -431,8 +431,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae43c7b22b8c724f8aa65873a9f13e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
   slider: {fileID: 146442848}
+  levl: 0
+  pawpaw: {fileID: 297894500}
 --- !u!1 &157153467
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,8 +804,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: -90
   laser: {fileID: 2579691031296142408, guid: bd0132204e00701459cb452f8a58f650, type: 3}
+  laser2: {fileID: 0}
   pawpoint: {fileID: 878046328}
   starttimepaw: 1
+  damage: 1
+  damage2: 0
 --- !u!212 &297894501
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3624,8 +3628,6 @@ MonoBehaviour:
   speed: 1
   Boss: 0
   Boss2: 0
-  helbar: {fileID: 0}
-  helbar2: {fileID: 0}
 --- !u!4 &1710705505
 Transform:
   m_ObjectHideFlags: 0

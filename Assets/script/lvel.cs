@@ -5,12 +5,23 @@ using UnityEngine.UI;
 
 public class lvel : MonoBehaviour
 {
-    public int level;
-
     public Slider slider;
+
+    public float levl = 1;
+
+    public pawpaw pawpaw;
+
+    void Start()
+    {
+        levl=slider.value;
+    }
 
     void Update()
     {
-        level = (int)slider.value;
+        if(slider.value>levl)
+        {
+            levl=slider.value;
+            pawpaw.upgrat((int)levl);
+        }
     }
 }
