@@ -11,6 +11,8 @@ public class lvel : MonoBehaviour
 
     public pawpaw pawpaw;
 
+    public player player;
+
     void Start()
     {
         levl=slider.value;
@@ -22,6 +24,8 @@ public class lvel : MonoBehaviour
         {
             levl=slider.value;
             pawpaw.upgrat((int)levl);
+            player.upgrat((int)levl);
+
         }
     }
 }

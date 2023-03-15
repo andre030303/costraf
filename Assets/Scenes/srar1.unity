@@ -688,7 +688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: -90
   rotation: 10
-  laser: {fileID: 2579691031296142408, guid: bd0132204e00701459cb452f8a58f650, type: 3}
+  laser: {fileID: 2579691031296142408, guid: 3de333ba527e3b94990cd06eee2ae147, type: 3}
   pawpoint: {fileID: 1822632569}
   player: {fileID: 0}
   bas: {fileID: 1738161674}
@@ -1004,6 +1004,7 @@ MonoBehaviour:
   rotation: 5
   speed: 1
   Boss: 1
+  Boss2: 0
 --- !u!4 &1686969858
 Transform:
   m_ObjectHideFlags: 0
@@ -1402,7 +1403,6 @@ GameObject:
   - component: {fileID: 1738161673}
   - component: {fileID: 1738161672}
   - component: {fileID: 1738161671}
-  - component: {fileID: 1738161675}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -1505,6 +1505,7 @@ MonoBehaviour:
   rotation: 0.1
   speed: 1
   Boss: 0
+  Boss2: 0
 --- !u!4 &1738161674
 Transform:
   m_ObjectHideFlags: 0
@@ -1522,24 +1523,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1738161675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738161670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b196ec43d2702d54ca1eadb987a25468, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healt: 3
-  player: {fileID: 0}
-  offset: -180
-  rotation: 0.1
-  speed: 1
-  Boss: 0
 --- !u!1 &1745449139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,7 +2031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: -90
   rotation: 10
-  laser: {fileID: 2579691031296142408, guid: bd0132204e00701459cb452f8a58f650, type: 3}
+  laser: {fileID: 2579691031296142408, guid: 3de333ba527e3b94990cd06eee2ae147, type: 3}
   pawpoint: {fileID: 1286750709}
   player: {fileID: 0}
   bas: {fileID: 1994284102}
@@ -2348,6 +2331,7 @@ MonoBehaviour:
   rotation: 0.1
   speed: 1
   Boss: 0
+  Boss2: 0
 --- !u!4 &1994284102
 Transform:
   m_ObjectHideFlags: 0

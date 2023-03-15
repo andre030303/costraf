@@ -11,17 +11,31 @@ public class player : MonoBehaviour
 
     private int MaxHelth2;
 
+    private int MaxHelth3;
+
     private float procent;
 
     private float procenti;
 
     public HEALTH helbar;
 
+    void Start()
+    {
+        MaxHelth3=MaxHelth;
+    }
+
+    public void upgrat(int levl)
+    {
+        MaxHelth=MaxHelth3*levl;
+
+    }
+
     private void Update()
     {
         if (MaxHelth > MaxHelth2)
         {
             helbar.SetMaxHelth (MaxHelth);
+            health=MaxHelth;
         }
         MaxHelth2 = MaxHelth;
         if (health <= 0)

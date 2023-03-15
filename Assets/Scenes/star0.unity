@@ -434,6 +434,7 @@ MonoBehaviour:
   slider: {fileID: 146442848}
   levl: 0
   pawpaw: {fileID: 297894500}
+  player: {fileID: 1612141680}
 --- !u!1 &157153467
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,11 +805,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: -90
   laser: {fileID: 2579691031296142408, guid: bd0132204e00701459cb452f8a58f650, type: 3}
-  laser2: {fileID: 0}
   pawpoint: {fileID: 878046328}
   starttimepaw: 1
   damage: 1
-  damage2: 0
 --- !u!212 &297894501
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1722,7 +1721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: -90
   rotation: 10
-  laser: {fileID: 2579691031296142408, guid: bd0132204e00701459cb452f8a58f650, type: 3}
+  laser: {fileID: 2579691031296142408, guid: 3de333ba527e3b94990cd06eee2ae147, type: 3}
   pawpoint: {fileID: 1856026376}
   player: {fileID: 1612141675}
   bas: {fileID: 1710705505}
