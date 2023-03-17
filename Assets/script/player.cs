@@ -17,7 +17,7 @@ public class player : MonoBehaviour
 
     private float procenti;
 
-    public HEALTH helbar;
+    public HEALTH HEALTH;
 
     void Start()
     {
@@ -34,10 +34,10 @@ public class player : MonoBehaviour
     {
         if (MaxHelth > MaxHelth2)
         {
-            helbar.SetMaxHelth (MaxHelth);
+            HEALTH.SetMaxHelth (MaxHelth);
             health=MaxHelth;
+            MaxHelth2 = MaxHelth;
         }
-        MaxHelth2 = MaxHelth;
         if (health <= 0)
         {
             Destroy (gameObject);
@@ -48,7 +48,7 @@ public class player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        helbar.SetHealth (health);
+        HEALTH.SetHealth (health);
         procent = (float)MaxHelth/100;
         procenti = (float)health/procent;
         GetComponent<wasd>().harm(procenti);

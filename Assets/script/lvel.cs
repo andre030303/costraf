@@ -2,30 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class lvel : MonoBehaviour
 {
-    public Slider slider;
-
-    public float levl = 1;
+    public int levl = 1;
 
     public pawpaw pawpaw;
 
     public player player;
 
+    public TMP_Text znalvl;
+
     void Start()
     {
-        levl=slider.value;
+        znalvl = GetComponent<TMP_Text>();
     }
 
-    void Update()
+    public void lvelup()
     {
-        if(slider.value>levl)
-        {
-            levl=slider.value;
-            pawpaw.upgrat((int)levl);
-            player.upgrat((int)levl);
-
-        }
+        levl+=1;
+        znalvl.text = levl.ToString();
+        pawpaw.upgrat((int)levl);
+        player.upgrat((int)levl);
     }
 }

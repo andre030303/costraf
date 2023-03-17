@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
     public bool Boss2;
 
     private HEALTH HEALTH;
+    
+    public GameObject lvel;
 
     private GameObject helbar;
 
@@ -29,6 +31,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        lvel = GameObject.Find("lvel");
         if (Boss)
         {
             helbar = GameObject.FindGameObjectWithTag("hp");
@@ -61,32 +64,17 @@ public class Enemy : MonoBehaviour
         if(Boss == true)
         {   
             helbar.SetActive(true);
-            HEALTH = helbar.GetComponent<HEALTH>();
-            HEALTH.SetMaxHelth (healt);
+            helbar.GetComponent<HEALTH>().SetMaxHelth (healt);
         }
         if(Boss2 == true)
         {   
             helbar2.SetActive(true);
-            HEALTH = helbar2.GetComponent<HEALTH>();
-            HEALTH.SetMaxHelth (healt);
+            helbar2.GetComponent<HEALTH>().SetMaxHelth (healt);
         }
     }
 
     private void Update()
     {
-        if (healt <= 0)
-        {
-            if(Boss == true)
-            {
-                helbar.SetActive(false);             
-            }
-            if(Boss2 == true)
-            {
-                helbar2.SetActive(false);             
-            }
-            Destroy (gameObject);
-        }
-
         Vector3 Enemy = player.position - transform.position;
         float rotz = (Mathf.Atan2(Enemy.y, Enemy.x) * Mathf.Rad2Deg) + offset;
         if (Rb.rotation > rotz)
@@ -103,9 +91,23 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         healt -= damage;
+        if (healt <= 0)
+        {
+            if(Boss == true)
+            {
+                helbar.SetActive(false);             
+            }
+            if(Boss2 == true)
+            {
+                helbar2.SetActive(false);             
+            }
+            lvel.GetComponent<lvel>().lvelup();
+            Destroy (gameObject);
+        }
         if(Boss == true || Boss2 == true)
         {
-            HEALTH.SetHealth (healt);
+            helbar.GetComponent<HEALTH>().SetHealth (healt);
+            helbar2.GetComponent<HEALTH>().SetHealth (healt);
         }
     }
 }

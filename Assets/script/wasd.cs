@@ -5,7 +5,9 @@ using UnityEngine;
 public class wasd : MonoBehaviour
 {
     public float speed;
+
     public float rotation;
+    
     Rigidbody2D Rb;
 
     void Start()
