@@ -11,24 +11,16 @@ public class map : MonoBehaviour
 
     public GameObject Text;
 
-    public GameObject hpbos;
-
-    public GameObject hpbos2;
-
     public void star1()
     {
         SceneManager.LoadScene(2);
         strelka.SetActive(true);
-        hpbos.SetActive(true);
-        hpbos2.SetActive(true);
     }
 
     public void star2()
     {
         SceneManager.LoadScene(3);
         strelka.SetActive(true);
-        hpbos.SetActive(true);
-        hpbos2.SetActive(true);
     }
 
 

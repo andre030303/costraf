@@ -24,34 +24,16 @@ public class Enemy : MonoBehaviour
     
     public GameObject lvel;
 
-    private GameObject helbar;
+    public GameObject helbar;
 
-    private GameObject helbar2;
+    public GameObject helbar2;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         lvel = GameObject.Find("lvel");
-        if (Boss)
+        if (Boss && !Boss2)
         {
-            helbar = GameObject.FindGameObjectWithTag("hp");
-            helbar.SetActive(false);
-            if(GameObject.Find("Boss") ==  null)
-            {
-                helbar2 = GameObject.FindGameObjectWithTag("hp2");
-                helbar2.SetActive(false);
-            }
-        }else if (!Boss2)
-        {
-
-            helbar = GameObject.FindGameObjectWithTag("hp");
-            helbar.SetActive(false);
-            helbar2 = GameObject.FindGameObjectWithTag("hp2");
-            helbar2.SetActive(false);  
-        }
-        if (Boss2)
-        {
-            helbar2 = GameObject.FindGameObjectWithTag("hp2");
             helbar2.SetActive(false);
         }
     }
