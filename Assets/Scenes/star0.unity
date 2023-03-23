@@ -1233,8 +1233,6 @@ MonoBehaviour:
   mape: {fileID: 1775961769}
   strelka: {fileID: 1384813529}
   Text: {fileID: 361473164}
-  hpbos: {fileID: 0}
-  hpbos2: {fileID: 0}
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2761,6 +2759,7 @@ GameObject:
   - component: {fileID: 1612141676}
   - component: {fileID: 1612141680}
   - component: {fileID: 1612141681}
+  - component: {fileID: 1612141682}
   - component: {fileID: 1612141677}
   - component: {fileID: 1612141679}
   m_Layer: 6
@@ -2906,6 +2905,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc2ad46088aea24fb766f189dd5de55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1612141682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612141671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48aa0c26cd016b4b887fffd63fb0ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mape: {fileID: 1775961769}
 --- !u!1 &1625412069
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,6 +3119,8 @@ MonoBehaviour:
   Boss: 0
   Boss2: 0
   lvel: {fileID: 0}
+  helbar: {fileID: 0}
+  helbar2: {fileID: 0}
 --- !u!4 &1710705505
 Transform:
   m_ObjectHideFlags: 0

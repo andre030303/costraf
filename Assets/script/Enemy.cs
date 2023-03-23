@@ -28,20 +28,10 @@ public class Enemy : MonoBehaviour
 
     public GameObject helbar2;
 
-    private void Awake()
+    void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         lvel = GameObject.Find("lvel");
-        if (Boss && !Boss2)
-        {
-            helbar2.SetActive(false);
-        }
-    }
-
-
-
-    void Start()
-    {
         Rb = GetComponent<Rigidbody2D>();
         if(Boss == true)
         {   
@@ -86,9 +76,12 @@ public class Enemy : MonoBehaviour
             lvel.GetComponent<lvel>().lvelup();
             Destroy (gameObject);
         }
-        if(Boss == true || Boss2 == true)
+        if(Boss == true)
         {
-            helbar.GetComponent<HEALTH>().SetHealth (healt);
+          helbar.GetComponent<HEALTH>().SetHealth (healt);  
+        }
+        if(Boss2 == true)
+        {
             helbar2.GetComponent<HEALTH>().SetHealth (healt);
         }
     }
