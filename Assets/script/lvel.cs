@@ -6,24 +6,73 @@ using TMPro;
 
 public class lvel : MonoBehaviour
 {
-    public int levl = 1;
+    public int levl;
 
     public pawpaw pawpaw;
 
-    public player player;
+    private player player;
 
     public TMP_Text znalvl;
 
+    private int HP;
+
+    private int Speed;
+
+    private int Damage;
+
     void Start()
     {
-        znalvl = GetComponent<TMP_Text>();
+        player = GetComponent<player>();
+    }
+
+    public void HPUP()
+    {
+        if(levl>0)
+        {
+            levl-=1;
+            HP+=1;
+            player.upgrat(HP);
+        }
+    }
+    public void HPDawn()
+    {
+        if(HP<0)
+        {
+            levl-=1;
+            HP+=1;
+            player.upgrat(HP);
+        }
+    }
+    public void SpeedUP()
+    {
+
+    }
+    public void SpeedDawn()
+    {
+
+    }
+    public void DamageUP()
+    {
+        if(levl>0)
+        {
+            levl-=1;
+            Damage+=1;
+            pawpaw.upgrat(Damage);
+        }
+    }
+    public void DamageDawn()
+    {
+        if(HP<0)
+        {
+            levl+=1;
+            Damage-=1;
+            pawpaw.upgrat(Damage);
+        }
     }
 
     public void lvelup()
     {
         levl+=1;
         znalvl.text = levl.ToString();
-        pawpaw.upgrat((int)levl);
-        player.upgrat((int)levl);
     }
 }

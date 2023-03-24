@@ -21,17 +21,16 @@ public class Enemy : MonoBehaviour
     public bool Boss2;
 
     private HEALTH HEALTH;
-    
-    public GameObject lvel;
 
     public GameObject helbar;
 
     public GameObject helbar2;
 
+    public GameObject detal;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        lvel = GameObject.Find("lvel");
         Rb = GetComponent<Rigidbody2D>();
         if(Boss == true)
         {   
@@ -73,8 +72,8 @@ public class Enemy : MonoBehaviour
             {
                 helbar2.SetActive(false);             
             }
-            lvel.GetComponent<lvel>().lvelup();
             Destroy (gameObject);
+            Instantiate(detal,transform.position,transform.rotation);
         }
         if(Boss == true)
         {

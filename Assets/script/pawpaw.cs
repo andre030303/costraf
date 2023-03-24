@@ -21,7 +21,7 @@ public class pawpaw : MonoBehaviour
 
     public void upgrat(int levl)
     {
-        damage=damage2*levl;
+        damage=damage2+levl;
 
     }
 

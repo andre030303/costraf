@@ -13,21 +13,31 @@ public class player : MonoBehaviour
 
     private int MaxHelth3;
 
-    private float procent;
-
     private float procenti;
 
     public HEALTH HEALTH;
 
+    public lvel lvel;
+
     void Start()
     {
         MaxHelth3=MaxHelth;
+        lvel = GetComponent<lvel>();
     }
 
     public void upgrat(int levl)
     {
-        MaxHelth=MaxHelth3*levl;
+        MaxHelth=MaxHelth3+levl;
 
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Scrap")
+        {
+            Destroy (collision.gameObject);
+            lvel.lvelup();
+        }
     }
 
     private void Update()
@@ -49,8 +59,7 @@ public class player : MonoBehaviour
     {
         health -= damage;
         HEALTH.SetHealth (health);
-        procent = (float)MaxHelth/100;
-        procenti = (float)health/procent;
+        procenti = (float)health/((float)MaxHelth/100);
         GetComponent<wasd>().harm(procenti);
     }
 }

@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - hp
   - hp2
+  - Scrap
   layers:
   - Default
   - TransparentFX
