@@ -42,7 +42,7 @@ public class player : MonoBehaviour
 
     private void Update()
     {
-        if (MaxHelth > MaxHelth2)
+        if (MaxHelth > MaxHelth2 && MaxHelth < MaxHelth2)
         {
             HEALTH.SetMaxHelth (MaxHelth);
             health=MaxHelth;

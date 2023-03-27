@@ -12,7 +12,15 @@ public class lvel : MonoBehaviour
 
     private player player;
 
+    private wasd wasd;
+
     public TMP_Text znalvl;
+
+    public TMP_Text znaHP;
+
+    public TMP_Text znaSpeed;
+
+    public TMP_Text znaDamage;
 
     private int HP;
 
@@ -23,6 +31,7 @@ public class lvel : MonoBehaviour
     void Start()
     {
         player = GetComponent<player>();
+        wasd = GetComponent<wasd>();
     }
 
     public void HPUP()
@@ -31,25 +40,39 @@ public class lvel : MonoBehaviour
         {
             levl-=1;
             HP+=1;
+            znaHP.text = HP.ToString();
             player.upgrat(HP);
         }
     }
     public void HPDawn()
     {
-        if(HP<0)
+        if(HP>0)
         {
-            levl-=1;
-            HP+=1;
+            levl+=1;
+            HP-=1;
+            znaHP.text = HP.ToString();
             player.upgrat(HP);
         }
     }
     public void SpeedUP()
     {
-
+        if(levl>0)
+        {
+            levl-=1;
+            Speed+=1;
+            znaSpeed.text = Speed.ToString();
+            wasd.upgrat(Speed);
+        }
     }
     public void SpeedDawn()
     {
-
+        if(Speed>0)
+        {
+            levl+=1;
+            Speed-=1;
+            znaSpeed.text = Speed.ToString();
+            wasd.upgrat(Speed);
+        }
     }
     public void DamageUP()
     {
@@ -57,15 +80,17 @@ public class lvel : MonoBehaviour
         {
             levl-=1;
             Damage+=1;
+            znaDamage.text = Damage.ToString();
             pawpaw.upgrat(Damage);
         }
     }
     public void DamageDawn()
     {
-        if(HP<0)
+        if(Damage>0)
         {
             levl+=1;
             Damage-=1;
+            znaDamage.text = Damage.ToString();
             pawpaw.upgrat(Damage);
         }
     }

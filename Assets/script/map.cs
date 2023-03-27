@@ -11,6 +11,8 @@ public class map : MonoBehaviour
 
     public GameObject Text;
 
+    public GameObject levl;
+
     public void star1()
     {
         SceneManager.LoadScene(2);
@@ -39,6 +41,15 @@ public class map : MonoBehaviour
         else
         {
             mape.SetActive(false);
+        }
+        if (Input.GetKey(KeyCode.Tab) && !(GameObject.FindGameObjectWithTag("Enemy")))
+        {
+            levl.SetActive(true);
+            Text.SetActive(false);
+        }
+        else
+        {
+            levl.SetActive(false);
         }
     }
 }
