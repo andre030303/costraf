@@ -34,6 +34,10 @@ public class laser : MonoBehaviour
                 {
                     hitInfo.collider.GetComponent<player>().TakeDamage(damage);
                 }
+                if (hitInfo.collider.CompareTag("Boss"))
+                {
+                    hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
+                }
                 Destroy(gameObject);
             }
 

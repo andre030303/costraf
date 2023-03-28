@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 82677724}
   m_Layer: 6
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -627,9 +627,9 @@ MonoBehaviour:
   speed: 1
   Boss: 1
   Boss2: 0
-  lvel: {fileID: 0}
   helbar: {fileID: 1133352343}
   helbar2: {fileID: 791364391}
+  detal: {fileID: 3893583060773179208, guid: 5cb2198d61e7c0c4c9dcee6baad0f358, type: 3}
 --- !u!4 &82677727
 Transform:
   m_ObjectHideFlags: 0
@@ -1273,7 +1273,7 @@ GameObject:
   - component: {fileID: 791364393}
   m_Layer: 5
   m_Name: Helboss
-  m_TagString: hp2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1791,7 +1791,7 @@ GameObject:
   - component: {fileID: 1133352345}
   m_Layer: 5
   m_Name: Helboss
-  m_TagString: hp
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2172,7 +2172,7 @@ GameObject:
   - component: {fileID: 1853021028}
   m_Layer: 6
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2586,9 +2586,9 @@ MonoBehaviour:
   speed: 1
   Boss: 0
   Boss2: 1
-  lvel: {fileID: 0}
   helbar: {fileID: 1133352343}
   helbar2: {fileID: 791364391}
+  detal: {fileID: 3893583060773179208, guid: 5cb2198d61e7c0c4c9dcee6baad0f358, type: 3}
 --- !u!4 &1853021031
 Transform:
   m_ObjectHideFlags: 0

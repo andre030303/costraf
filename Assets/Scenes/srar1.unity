@@ -1435,7 +1435,7 @@ GameObject:
   - component: {fileID: 1686969859}
   m_Layer: 6
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1480,9 +1480,9 @@ MonoBehaviour:
   speed: 1
   Boss: 1
   Boss2: 0
-  lvel: {fileID: 0}
   helbar: {fileID: 1079932750}
   helbar2: {fileID: 968758255}
+  detal: {fileID: 3893583060773179208, guid: 5cb2198d61e7c0c4c9dcee6baad0f358, type: 3}
 --- !u!4 &1686969858
 Transform:
   m_ObjectHideFlags: 0
@@ -1984,9 +1984,9 @@ MonoBehaviour:
   speed: 1
   Boss: 0
   Boss2: 0
-  lvel: {fileID: 0}
   helbar: {fileID: 0}
   helbar2: {fileID: 0}
+  detal: {fileID: 3893583060773179208, guid: 5cb2198d61e7c0c4c9dcee6baad0f358, type: 3}
 --- !u!4 &1738161674
 Transform:
   m_ObjectHideFlags: 0
@@ -2965,9 +2965,9 @@ MonoBehaviour:
   speed: 1
   Boss: 0
   Boss2: 0
-  lvel: {fileID: 0}
   helbar: {fileID: 0}
   helbar2: {fileID: 0}
+  detal: {fileID: 3893583060773179208, guid: 5cb2198d61e7c0c4c9dcee6baad0f358, type: 3}
 --- !u!4 &1994284102
 Transform:
   m_ObjectHideFlags: 0

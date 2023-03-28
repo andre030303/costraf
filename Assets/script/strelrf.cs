@@ -12,11 +12,26 @@ public class strelrf : MonoBehaviour
 
     public GameObject strelka;
 
+    public bool Boss;
+
+    private string Enemy;
+
+    void Awake()
+    {
+        if(Boss)
+        {
+            Enemy="Boss";
+        }else
+        {
+            Enemy="Enemy";
+        }
+    }
+
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Enemy") != null)
+        if (GameObject.FindGameObjectWithTag(Enemy) != null)
         {
-            enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
+            enemy = GameObject.FindGameObjectWithTag(Enemy).transform;
         }
         if (enemy != null)
         {
