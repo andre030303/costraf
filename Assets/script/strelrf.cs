@@ -10,8 +10,6 @@ public class strelrf : MonoBehaviour
 
     public float rotation;
 
-    public GameObject strelka;
-
     public bool Boss;
 
     private string Enemy;
@@ -41,7 +39,7 @@ public class strelrf : MonoBehaviour
         }
         else
         {
-            strelka.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

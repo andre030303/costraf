@@ -7,8 +7,6 @@ public class map : MonoBehaviour
 {
     public GameObject mape;
 
-    public GameObject strelka;
-
     public GameObject Text;
 
     public GameObject levl;
@@ -16,13 +14,11 @@ public class map : MonoBehaviour
     public void star1()
     {
         SceneManager.LoadScene(2);
-        strelka.SetActive(true);
     }
 
     public void star2()
     {
         SceneManager.LoadScene(3);
-        strelka.SetActive(true);
     }
 
 
