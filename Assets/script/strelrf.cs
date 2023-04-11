@@ -10,27 +10,13 @@ public class strelrf : MonoBehaviour
 
     public float rotation;
 
-    public bool Boss;
-
-    private string Enemy;
-
-    void Awake()
+    public void Enemy(GameObject i)
     {
-        if(Boss)
-        {
-            Enemy="Boss";
-        }else
-        {
-            Enemy="Enemy";
-        }
-    }
+        enemy = i.transform;
+    }    
 
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag(Enemy) != null)
-        {
-            enemy = GameObject.FindGameObjectWithTag(Enemy).transform;
-        }
         if (enemy != null)
         {
             Vector3 Enemy = enemy.position - transform.position;

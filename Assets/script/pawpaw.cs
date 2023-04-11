@@ -6,7 +6,6 @@ public class pawpaw : MonoBehaviour
 {
     public float offset;
     public GameObject laser;
-    private laser laser2;
     public Transform pawpoint;
     private float timepaw;
     public float starttimepaw;
@@ -16,7 +15,6 @@ public class pawpaw : MonoBehaviour
     void Start()
     {
         damage2=damage;
-        laser2 = laser.GetComponent<laser>();
     }
 
     public void upgrat(int levl)
@@ -35,7 +33,7 @@ public class pawpaw : MonoBehaviour
         {
             if(Input.GetMouseButton(0))
             {
-                laser2.Upgredate(damage);
+                laser.GetComponent<laser>().Upgredate(damage);
                 Instantiate(laser,pawpoint.position,transform.rotation);
                 timepaw=starttimepaw;
             }

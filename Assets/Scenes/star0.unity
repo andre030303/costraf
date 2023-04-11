@@ -2876,7 +2876,6 @@ MonoBehaviour:
   Enemy: {fileID: 1715551715}
   Boss: {fileID: 758423715}
   strelka: {fileID: 1043932426828511892, guid: 6cfb1bdd8b34a5b4bb2052a56525ab7b, type: 3}
-  strelka1: {fileID: 1043932426828511892, guid: 7b6f38375d0341147bbec951fec99dd9, type: 3}
   player: {fileID: 1612141675}
   strelrf: {fileID: 0}
 --- !u!1 &1160766727
@@ -4466,6 +4465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b196ec43d2702d54ca1eadb987a25468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   healt: 3
   player: {fileID: 0}
   offset: -50

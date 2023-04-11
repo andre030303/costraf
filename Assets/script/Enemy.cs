@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     Rigidbody2D Rb;
 
+    public Animator anim;
+
     public int healt;
 
     public Transform player;
