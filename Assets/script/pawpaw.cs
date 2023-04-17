@@ -5,11 +5,17 @@ using UnityEngine;
 public class pawpaw : MonoBehaviour
 {
     public float offset;
+
     public GameObject laser;
+
     public Transform pawpoint;
+
     private float timepaw;
+
     public float starttimepaw;
+
     public int damage;
+
     private int damage2;
 
     void Start()
@@ -20,7 +26,6 @@ public class pawpaw : MonoBehaviour
     public void upgrat(int levl)
     {
         damage=damage2+levl;
-
     }
 
     void Update()

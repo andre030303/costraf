@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 
     public int healt;
 
-    public Transform player;
+    private Transform player;
 
     public float offset;
 
@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void Update()
+    void Update()
     {
         Vector3 Enemy = player.position - transform.position;
         float rotz = (Mathf.Atan2(Enemy.y, Enemy.x) * Mathf.Rad2Deg) + offset;
@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         healt -= damage;
-        if (healt <= 0)
+        if (healt < 1)
         {
             if(Boss == true)
             {
@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour
         }
         if(Boss == true)
         {
-          helbar.GetComponent<HEALTH>().SetHealth (healt);  
+            helbar.GetComponent<HEALTH>().SetHealth (healt);  
         }
         if(Boss2 == true)
         {
