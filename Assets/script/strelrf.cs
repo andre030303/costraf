@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class strelrf : MonoBehaviour
 {
-    public float offset;
+    [SerializeField] private float offset;
 
-    public Transform enemy;
+    [SerializeField] private Transform enemy;
 
-    public float rotation;
+    [SerializeField] private float rotation;
 
     public void Enemy(GameObject i)
     {

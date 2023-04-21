@@ -6,21 +6,21 @@ using TMPro;
 
 public class lvel : MonoBehaviour
 {
-    public int levl;
+    [SerializeField] private int levl;
 
-    public pawpaw pawpaw;
+    [SerializeField] private pawpaw pawpaw;
 
     private player player;
 
     private wasd wasd;
 
-    public TMP_Text znalvl;
+    [SerializeField] private TMP_Text znalvl;
 
-    public TMP_Text znaHP;
+    [SerializeField] private TMP_Text znaHP;
 
-    public TMP_Text znaSpeed;
+    [SerializeField] private TMP_Text znaSpeed;
 
-    public TMP_Text znaDamage;
+    [SerializeField] private TMP_Text znaDamage;
 
     private int HP;
 

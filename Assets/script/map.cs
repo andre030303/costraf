@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class map : MonoBehaviour
 {
-    public GameObject mape;
+    [SerializeField] private GameObject mape;
 
-    public GameObject Text;
+    [SerializeField] private GameObject Text;
 
-    public GameObject levl;
+    [SerializeField] private GameObject levl;
 
     public void star1()
     {
@@ -25,31 +25,37 @@ public class map : MonoBehaviour
         levl.SetActive(false);
     }
 
+    public bool ControlEnemy()
+    {
+        return !(GameObject.FindGameObjectWithTag("Enemy")) && !(GameObject.FindGameObjectWithTag("Boss"));
+    }
+
 
     void Update()
     {
 
-        if (!(GameObject.FindGameObjectWithTag("Enemy")) && !(GameObject.FindGameObjectWithTag("Boss")))
+        if (ControlEnemy())
         {
             Text.SetActive(true);
-            if (Input.GetKey(KeyCode.M))
-            {
-                mape.SetActive(true);
-                Text.SetActive(false);
-            }
-            else
-            {
-                mape.SetActive(false);
-            }
-            if (Input.GetKey(KeyCode.Tab))
-            {
-                levl.SetActive(true);
-                Text.SetActive(false);
-            }
-            else
-            {
-                levl.SetActive(false);
-            }
         }
+        if (Input.GetKey(KeyCode.M) && ControlEnemy())
+        {
+            mape.SetActive(true);
+            Text.SetActive(false);
+        }
+        else
+        {
+            mape.SetActive(false);
+        }
+        if (Input.GetKey(KeyCode.Tab) && ControlEnemy())
+        {
+            levl.SetActive(true);
+            Text.SetActive(false);
+        }
+        else
+        {
+            levl.SetActive(false);
+        }
+        
     }
 }

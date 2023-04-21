@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class wasd : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] private float speed;
 
     private float speed2;
 
-    public float rotation;
+    [SerializeField] private float rotation;
     
     Rigidbody2D Rb;
 
@@ -40,17 +40,17 @@ public class wasd : MonoBehaviour
             Rb.AddRelativeForce(Vector2.up * speed);
         }
 
-        if (Input.GetKey(KeyCode.S))
+        /*if (Input.GetKey(KeyCode.S))
         {
             Rb.AddRelativeForce(Vector2.down * speed);
-        }
+        }*/
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
         {
             Rb.AddTorque(rotation);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W))
         {
             Rb.AddTorque(-rotation);
         }

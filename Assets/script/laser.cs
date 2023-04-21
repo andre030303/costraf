@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class laser : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] private float speed;
 
-    public float zader;
+    [SerializeField] private float zader;
 
     private float schet;  
 
-    public float lifetime;
+    [SerializeField] private float lifetime;
 
-    public float distanse;
+    [SerializeField] private float distanse;
 
-    public int damage;
+    [SerializeField] private int damage;
 
-    public LayerMask whatIsSolid;
+    [SerializeField] private LayerMask whatIsSolid;
     
     public void Upgredate(int damage2)
     {

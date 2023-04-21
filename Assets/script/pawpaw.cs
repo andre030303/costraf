@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class pawpaw : MonoBehaviour
 {
-    public float offset;
+    [SerializeField] private float offset;
 
-    public GameObject laser;
+    [SerializeField] private GameObject laser;
 
-    public Transform pawpoint;
+    [SerializeField] private Transform pawpoint;
 
     private float timepaw;
 
-    public float starttimepaw;
+    [SerializeField] private float starttimepaw;
 
-    public int damage;
+    [SerializeField] private int damage;
 
     private int damage2;
 

@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
-    public int health;
+    [SerializeField] private int health;
 
-    public int MaxHelth;
+    [SerializeField] private int MaxHelth;
 
     private int MaxHelth2;
 
@@ -15,9 +15,9 @@ public class player : MonoBehaviour
 
     private float procenti;
 
-    public HEALTH HEALTH;
+    [SerializeField] private HEALTH HEALTH;
 
-    public lvel lvel;
+    [SerializeField] private lvel lvel;
 
     void Start()
     {
@@ -42,7 +42,7 @@ public class player : MonoBehaviour
 
     private void Update()
     {
-        if (MaxHelth > MaxHelth2 && MaxHelth < MaxHelth2)
+        if (MaxHelth > MaxHelth2 || MaxHelth < MaxHelth2)
         {
             HEALTH.SetMaxHelth (MaxHelth);
             health=MaxHelth;

@@ -6,29 +6,29 @@ public class Enemy : MonoBehaviour
 {
     Rigidbody2D Rb;
 
-    public Animator anim;
-
-    public int healt;
+    [SerializeField] private int healt;
 
     private Transform player;
 
-    public float offset;
+    [SerializeField] private float offset;
 
-    public float rotation;
+    [SerializeField] private float rotation;
 
-    public float speed;
+    [SerializeField] private float speed;
 
-    public bool Boss;
+    [SerializeField] private bool Boss;
 
-    public bool Boss2;
+    [SerializeField] private bool Boss2;
 
     private HEALTH HEALTH;
 
-    public GameObject helbar;
+    [SerializeField] private GameObject helbar;
 
-    public GameObject helbar2;
+    [SerializeField] private GameObject helbar2;
 
-    public GameObject detal;
+    [SerializeField] private GameObject detal;
+
+    [SerializeField] private GameObject Boom;
 
     void Start()
     {
@@ -75,6 +75,7 @@ public class Enemy : MonoBehaviour
                 helbar2.SetActive(false);             
             }
             Destroy (gameObject);
+            Instantiate(Boom, transform.position, transform.rotation);
             Instantiate(detal,transform.position,transform.rotation);
         }
         if(Boss == true)

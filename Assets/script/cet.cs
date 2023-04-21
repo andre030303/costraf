@@ -6,21 +6,23 @@ using TMPro;
 
 public class cet : MonoBehaviour
 {
-    public TMP_Text Enemy;
+    [SerializeField] private TMP_Text Enemy;
 
-    public TMP_Text Boss;
+    [SerializeField] private TMP_Text Boss;
 
     private GameObject[] Enemycet;
 
     private GameObject[] Bosscet;
 
-    public GameObject strelka;
+     private GameObject[] Scrapcet;
 
-    public Transform player;
+    [SerializeField] private GameObject strelka;
 
-    private int counter;
+    [SerializeField] private GameObject strelka2;
 
-    public strelrf strelrf;
+    [SerializeField] private Transform player;
+
+    [SerializeField] private strelrf strelrf;
 
     void Update()
     {
@@ -28,7 +30,8 @@ public class cet : MonoBehaviour
         Enemy.text = Enemycet.Length.ToString();
         Bosscet = GameObject.FindGameObjectsWithTag("Boss");
         Boss.text = Bosscet.Length.ToString();
-        if(!(GameObject.Find("Strelka(Clone)")) && GameObject.FindGameObjectWithTag("Enemy") || GameObject.FindGameObjectWithTag("Boss"))
+        Scrapcet = GameObject.FindGameObjectsWithTag("Scrap");
+        if(!(GameObject.Find("Strelka(Clone)")) && (GameObject.FindGameObjectWithTag("Enemy") || GameObject.FindGameObjectWithTag("Boss")))
         {
             foreach(GameObject i in Enemycet)
             {
@@ -39,6 +42,14 @@ public class cet : MonoBehaviour
             {
                 strelka.GetComponent<strelrf>().Enemy(i);
                 Instantiate(strelka,player.position,player.rotation,player.transform);
+            }
+        }
+        if(!(GameObject.Find("Strelka 2(Clone)")) && !(GameObject.FindGameObjectWithTag("Enemy")) && !(GameObject.FindGameObjectWithTag("Boss")))
+        {
+            foreach(GameObject i in Scrapcet)
+            {
+                strelka2.GetComponent<strelrf>().Enemy(i);
+                Instantiate(strelka2,player.position,player.rotation,player.transform);
             }
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HEALTH : MonoBehaviour
 {
-    public Slider slider;
+    [SerializeField] private Slider slider;
 
     public void SetMaxHelth(int health)
     {

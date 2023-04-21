@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class pawpaw2 : MonoBehaviour
 {
-    public float offset;
+    [SerializeField] private float offset;
 
-    public float rotation;
+    [SerializeField] private float rotation;
 
     Rigidbody2D Rb;
 
-    public GameObject laser;
+    [SerializeField] private GameObject laser;
 
-    public Transform pawpoint;
+    [SerializeField] private Transform pawpoint;
 
-    public Transform player;
+    [SerializeField] private Transform player;
 
-    public Transform bas;
+    [SerializeField] private Transform bas;
 
     private float timepaw;
 
-    public float starttimepaw;
+    [SerializeField] private float starttimepaw;
 
-    public float ros;
+    [SerializeField] private float ros;
 
     private void Awake()
     {
