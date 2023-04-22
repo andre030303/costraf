@@ -50,3 +50,6 @@ TagManager:
   - name: paw
     uniqueID: 1578026635
     locked: 0
+  - name: Map
+    uniqueID: 4114120131
+    locked: 0

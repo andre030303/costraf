@@ -13369,7 +13369,7 @@ MonoBehaviour:
   Boss2: 0
   helbar: {fileID: 1133352343}
   helbar2: {fileID: 791364391}
-  detal: {fileID: 3893583060773179208, guid: 5cb2198d61e7c0c4c9dcee6baad0f358, type: 3}
+  detal: {fileID: 7322184962186245147, guid: 8d897b347bece994383a942863c73d0b, type: 3}
   Boom: {fileID: 5573107788473067958, guid: 96265e0279c84c64697db92786df5ffd, type: 3}
 --- !u!4 &1012108331
 Transform:
@@ -29052,7 +29052,7 @@ MonoBehaviour:
   Boss2: 0
   helbar: {fileID: 1133352343}
   helbar2: {fileID: 791364391}
-  detal: {fileID: 3893583060773179208, guid: 5cb2198d61e7c0c4c9dcee6baad0f358, type: 3}
+  detal: {fileID: 7322184962186245147, guid: 8d897b347bece994383a942863c73d0b, type: 3}
   Boom: {fileID: 5573107788473067958, guid: 96265e0279c84c64697db92786df5ffd, type: 3}
 --- !u!4 &1823972189
 Transform:

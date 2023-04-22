@@ -20592,7 +20592,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734258563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.51, y: 3.91, z: 0}
+  m_LocalPosition: {x: 14.09, y: -0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -34017,7 +34017,7 @@ MonoBehaviour:
   Boss2: 0
   helbar: {fileID: 1079932750}
   helbar2: {fileID: 968758255}
-  detal: {fileID: 3893583060773179208, guid: 5cb2198d61e7c0c4c9dcee6baad0f358, type: 3}
+  detal: {fileID: 7322184962186245147, guid: 8d897b347bece994383a942863c73d0b, type: 3}
   Boom: {fileID: 5573107788473067958, guid: 96265e0279c84c64697db92786df5ffd, type: 3}
 --- !u!4 &1707322057
 Transform:
@@ -40233,7 +40233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849887094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.88, y: 3.91, z: 0}
+  m_LocalPosition: {x: -14.57, y: -2.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:

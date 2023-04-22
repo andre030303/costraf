@@ -11,11 +11,14 @@ public class map : MonoBehaviour
 
     [SerializeField] private GameObject levl;
 
+    [SerializeField] private alert alert;
+
     public void star1()
     {
         SceneManager.LoadScene(2);
         mape.SetActive(false);
         levl.SetActive(false);
+        alert.scet();
     }
 
     public void star2()
@@ -23,6 +26,7 @@ public class map : MonoBehaviour
         SceneManager.LoadScene(3);
         mape.SetActive(false);
         levl.SetActive(false);
+        alert.scet();
     }
 
     public bool ControlEnemy()
@@ -31,12 +35,12 @@ public class map : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
-
         if (ControlEnemy())
         {
             Text.SetActive(true);
+            alert.oneee();
         }
         if (Input.GetKey(KeyCode.M) && ControlEnemy())
         {

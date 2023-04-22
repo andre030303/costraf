@@ -14,7 +14,7 @@ public class cet : MonoBehaviour
 
     private GameObject[] Bosscet;
 
-     private GameObject[] Scrapcet;
+    private GameObject[] Scrapcet;
 
     [SerializeField] private GameObject strelka;
 
@@ -23,6 +23,20 @@ public class cet : MonoBehaviour
     [SerializeField] private Transform player;
 
     [SerializeField] private strelrf strelrf;
+
+    public void perecet()
+    {
+        foreach(GameObject i in Enemycet)
+        {
+            strelka.GetComponent<strelrf>().Enemy(i);
+            Instantiate(strelka,player.position,player.rotation,player.transform);
+        }
+        foreach(GameObject i in Bosscet)
+        {
+            strelka.GetComponent<strelrf>().Enemy(i);
+            Instantiate(strelka,player.position,player.rotation,player.transform);
+        }
+    }
 
     void Update()
     {
@@ -33,16 +47,7 @@ public class cet : MonoBehaviour
         Scrapcet = GameObject.FindGameObjectsWithTag("Scrap");
         if(!(GameObject.Find("Strelka(Clone)")) && (GameObject.FindGameObjectWithTag("Enemy") || GameObject.FindGameObjectWithTag("Boss")))
         {
-            foreach(GameObject i in Enemycet)
-            {
-                strelka.GetComponent<strelrf>().Enemy(i);
-                Instantiate(strelka,player.position,player.rotation,player.transform);
-            }
-            foreach(GameObject i in Bosscet)
-            {
-                strelka.GetComponent<strelrf>().Enemy(i);
-                Instantiate(strelka,player.position,player.rotation,player.transform);
-            }
+            perecet();
         }
         if(!(GameObject.Find("Strelka 2(Clone)")) && !(GameObject.FindGameObjectWithTag("Enemy")) && !(GameObject.FindGameObjectWithTag("Boss")))
         {
