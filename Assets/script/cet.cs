@@ -22,8 +22,6 @@ public class cet : MonoBehaviour
 
     [SerializeField] private Transform player;
 
-    [SerializeField] private strelrf strelrf;
-
     public void perecet()
     {
         foreach(GameObject i in Enemycet)

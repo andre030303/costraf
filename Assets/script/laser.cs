@@ -32,17 +32,13 @@ public class laser : MonoBehaviour
             if(hitInfo.collider != null)
             {   
 
-                if(hitInfo.collider.CompareTag("Enemy"))
+                if(hitInfo.collider.CompareTag("Enemy") || hitInfo.collider.CompareTag("Boss"))
                 {
                     hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
                 }
                 if (hitInfo.collider.CompareTag("Player"))
                 {
                     hitInfo.collider.GetComponent<player>().TakeDamage(damage);
-                }
-                if (hitInfo.collider.CompareTag("Boss"))
-                {
-                    hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
                 }
                 Destroy(gameObject);
             }

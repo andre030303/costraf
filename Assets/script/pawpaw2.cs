@@ -27,10 +27,6 @@ public class pawpaw2 : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-    }
-
-    void Start()
-    {
         Rb = GetComponent<Rigidbody2D>();
     }
 

@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   zader: 0.2
-  lifetime: 240
+  lifetime: 2
   distanse: 0.1
   damage: 5
   whatIsSolid:

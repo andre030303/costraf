@@ -40,11 +40,6 @@ public class wasd : MonoBehaviour
             Rb.AddRelativeForce(Vector2.up * speed);
         }
 
-        /*if (Input.GetKey(KeyCode.S))
-        {
-            Rb.AddRelativeForce(Vector2.down * speed);
-        }*/
-
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
         {
             Rb.AddTorque(rotation);

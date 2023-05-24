@@ -45,7 +45,6 @@ public class player : MonoBehaviour
         if (MaxHelth > MaxHelth2 || MaxHelth < MaxHelth2)
         {
             HEALTH.SetMaxHelth (MaxHelth);
-            health=MaxHelth;
             MaxHelth2 = MaxHelth;
         }
         if (health <= 0)
