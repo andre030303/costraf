@@ -41,6 +41,7 @@ public class lvel : MonoBehaviour
             levl-=1;
             HP+=1;
             znaHP.text = HP.ToString();
+            znalvl.text = levl.ToString();
             player.upgrat(HP);
         }
     }
@@ -51,6 +52,7 @@ public class lvel : MonoBehaviour
             levl+=1;
             HP-=1;
             znaHP.text = HP.ToString();
+            znalvl.text = levl.ToString();
             player.upgrat(HP);
         }
     }
@@ -61,6 +63,7 @@ public class lvel : MonoBehaviour
             levl-=1;
             Speed+=1;
             znaSpeed.text = Speed.ToString();
+            znalvl.text = levl.ToString();
             wasd.upgrat(Speed);
         }
     }
@@ -71,6 +74,7 @@ public class lvel : MonoBehaviour
             levl+=1;
             Speed-=1;
             znaSpeed.text = Speed.ToString();
+            znalvl.text = levl.ToString();
             wasd.upgrat(Speed);
         }
     }
@@ -81,6 +85,7 @@ public class lvel : MonoBehaviour
             levl-=1;
             Damage+=1;
             znaDamage.text = Damage.ToString();
+            znalvl.text = levl.ToString();
             pawpaw.upgrat(Damage);
         }
     }
@@ -91,6 +96,7 @@ public class lvel : MonoBehaviour
             levl+=1;
             Damage-=1;
             znaDamage.text = Damage.ToString();
+            znalvl.text = levl.ToString();
             pawpaw.upgrat(Damage);
         }
     }
