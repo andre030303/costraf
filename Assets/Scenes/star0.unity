@@ -25055,7 +25055,6 @@ MonoBehaviour:
   strelka: {fileID: 1043932426828511892, guid: 6cfb1bdd8b34a5b4bb2052a56525ab7b, type: 3}
   strelka2: {fileID: 1043932426828511892, guid: ec96284a7b891cb4abd0552969f04212, type: 3}
   player: {fileID: 1612141675}
-  strelrf: {fileID: 0}
 --- !u!1 &1156748999
 GameObject:
   m_ObjectHideFlags: 0
@@ -29752,7 +29751,7 @@ MonoBehaviour:
   healt: 3
   offset: -50
   rotation: 0.1
-  speed: 1
+  speed: 200
   Boss: 0
   Boss2: 0
   helbar: {fileID: 0}

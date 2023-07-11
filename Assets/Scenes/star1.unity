@@ -20577,7 +20577,7 @@ MonoBehaviour:
   healt: 3
   offset: -50
   rotation: 0.1
-  speed: 1
+  speed: 200
   Boss: 0
   Boss2: 0
   helbar: {fileID: 0}
@@ -33988,7 +33988,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 1
   m_AngularDrag: 5
   m_GravityScale: 0
@@ -34011,8 +34011,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healt: 10
   offset: -50
-  rotation: 5
-  speed: 1
+  rotation: 3
+  speed: 100
   Boss: 1
   Boss2: 0
   helbar: {fileID: 1079932750}
@@ -40218,7 +40218,7 @@ MonoBehaviour:
   healt: 3
   offset: -50
   rotation: 0.1
-  speed: 1
+  speed: 200
   Boss: 0
   Boss2: 0
   helbar: {fileID: 0}

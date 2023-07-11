@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73646d4a999428e4c9b1cb8bc696bcef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -90
+  offset: -80
   rotation: 10
   laser: {fileID: 2579691031296142408, guid: 6e1989e45c8df5e469909e4e987b75ea, type: 3}
   pawpoint: {fileID: 150483227}
@@ -505,12 +505,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b196ec43d2702d54ca1eadb987a25468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  player: {fileID: 18763465}
+  healt: 0
   offset: -70
   rotation: 0.5
-  speed: 1
-  stopos: 0
+  speed: 200
+  Boss: 0
+  Boss2: 0
+  helbar: {fileID: 0}
+  helbar2: {fileID: 0}
+  detal: {fileID: 0}
+  Boom: {fileID: 0}
 --- !u!4 &494328380
 Transform:
   m_ObjectHideFlags: 0
@@ -636,12 +640,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b196ec43d2702d54ca1eadb987a25468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  player: {fileID: 18763465}
+  healt: 0
   offset: -70
   rotation: 0.5
-  speed: 1
-  stopos: 0
+  speed: 200
+  Boss: 0
+  Boss2: 0
+  helbar: {fileID: 0}
+  helbar2: {fileID: 0}
+  detal: {fileID: 0}
+  Boom: {fileID: 0}
 --- !u!4 &503729635
 Transform:
   m_ObjectHideFlags: 0
@@ -1365,7 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73646d4a999428e4c9b1cb8bc696bcef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -90
+  offset: -80
   rotation: 10
   laser: {fileID: 2579691031296142408, guid: 6e1989e45c8df5e469909e4e987b75ea, type: 3}
   pawpoint: {fileID: 874473118}
@@ -1859,7 +1867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73646d4a999428e4c9b1cb8bc696bcef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -90
+  offset: -80
   rotation: 10
   laser: {fileID: 2579691031296142408, guid: 6e1989e45c8df5e469909e4e987b75ea, type: 3}
   pawpoint: {fileID: 1463799781}
@@ -2058,12 +2066,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b196ec43d2702d54ca1eadb987a25468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  player: {fileID: 18763465}
+  healt: 0
   offset: -70
   rotation: 0.5
-  speed: 1
-  stopos: 0
+  speed: 200
+  Boss: 0
+  Boss2: 0
+  helbar: {fileID: 0}
+  helbar2: {fileID: 0}
+  detal: {fileID: 0}
+  Boom: {fileID: 0}
 --- !u!4 &1823522241
 Transform:
   m_ObjectHideFlags: 0

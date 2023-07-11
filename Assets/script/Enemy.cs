@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
         {
             Rb.AddTorque(rotation);
         }
-        Rb.AddRelativeForce(Vector2.up * speed);
+        Rb.AddRelativeForce(Vector2.up * speed * Time.deltaTime);
     }
 
     public void TakeDamage(int damage)

@@ -552,7 +552,7 @@ MonoBehaviour:
   healt: 3
   offset: -50
   rotation: 0.1
-  speed: 1
+  speed: 200
   Boss: 0
   Boss2: 0
   helbar: {fileID: 0}
@@ -10313,7 +10313,7 @@ MonoBehaviour:
   healt: 3
   offset: -50
   rotation: 0.1
-  speed: 1
+  speed: 200
   Boss: 0
   Boss2: 0
   helbar: {fileID: 0}
@@ -10450,7 +10450,7 @@ MonoBehaviour:
   healt: 3
   offset: -50
   rotation: 0.1
-  speed: 1
+  speed: 200
   Boss: 0
   Boss2: 0
   helbar: {fileID: 0}
@@ -30023,7 +30023,7 @@ GameObject:
   - component: {fileID: 1465059867012303298}
   m_Layer: 0
   m_Name: enemys
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

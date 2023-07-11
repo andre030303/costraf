@@ -13363,8 +13363,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healt: 10
   offset: -50
-  rotation: 5
-  speed: 1
+  rotation: 3
+  speed: 100
   Boss: 0
   Boss2: 1
   helbar: {fileID: 1133352343}
@@ -29046,8 +29046,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healt: 10
   offset: -50
-  rotation: 5
-  speed: 1
+  rotation: 3
+  speed: 100
   Boss: 1
   Boss2: 0
   helbar: {fileID: 1133352343}

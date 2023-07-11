@@ -36,7 +36,7 @@ public class cet : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Enemycet = GameObject.FindGameObjectsWithTag("Enemy");
         Enemy.text = Enemycet.Length.ToString();
